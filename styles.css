@@ -1,0 +1,611 @@
+:root {
+  font-size: 10px;
+  --main-color: #d3ad7f;
+  --black: #131313;
+  --bg: #010103;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.caixa-video {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.caixa-video video {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 50%;
+  transform: translate(50%);
+}
+
+.caixa-video .mascara {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+}
+
+section {
+  max-width: 1200px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: var(--bg);
+  border-bottom: var(--border);
+  width: 100vw;
+}
+
+header section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+}
+
+header section a img {
+  height: 6rem;
+}
+
+header section nav a {
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  transition: 0.3s linear;
+}
+
+header section nav a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+header section .icons {
+  position: absolute;
+  right: 2rem;
+}
+
+header section .icons a i {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+header section .icons a i:hover {
+  color: var(--main-color);
+  transform: scale(1.2);
+}
+
+header section .botao-abrir-menu {
+  display: none;
+}
+
+header section .menu-mobile {
+  display: none;
+}
+
+.caixa-principal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.caixa-principal div {
+  max-width: 60rem;
+}
+
+.caixa-principal div h3 {
+  color: #fff;
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+.caixa-principal div h3 span {
+  color: var(--main-color);
+}
+
+.caixa-principal div p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: lighter;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.botao-link {
+  background: var(--main-color);
+  cursor: pointer;
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 1rem 3rem;
+  border: none;
+  transition: 0.3s linear;
+}
+
+.botao-link:hover {
+  letter-spacing: 0.1rem;
+}
+
+.titulo {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.titulo span {
+  color: var(--main-color);
+}
+
+.caixa-sobre .sobre-container {
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem {
+  flex: 1 1 45rem;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem img {
+  width: 100%;
+}
+
+.caixa-sobre .sobre-container .sobre-texto {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.caixa-sobre .sobre-container .sobre-texto p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #fff;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.caixa-menu .box-container .box {
+  text-align: center;
+  border: var(--border);
+  padding: 5rem;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.caixa-menu .box-container .box img {
+  height: 10rem;
+}
+
+.caixa-menu .box-container .box h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.caixa-menu .box-container .box .price {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+.caixa-menu .box-container .box span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.caixa-menu .box-container .box:hover {
+  background: #f2f2f2;
+}
+
+.caixa-menu .box-container .box:hover > * {
+  color: var(--black);
+}
+
+.caixa-review .box-container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.caixa-review .box-container .box p {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 2rem 0;
+  line-height: 1.8;
+  font-weight: lighter;
+}
+
+.caixa-review .box-container .box .user {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.caixa-review .box-container .box h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  transition: left 1s linear;
+}
+
+.mascara-modal {
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+}
+
+.caixa-whatsapp {
+  position: fixed;
+  right: 4%;
+  bottom: 7%;
+  z-index: 5;
+}
+
+.caixa-whatsapp .botao-whatsapp {
+  cursor: pointer;
+}
+
+.caixa-whatsapp .botao-whatsapp img {
+  height: 5.5rem;
+  transition: 0.2s linear;
+}
+
+.caixa-whatsapp .botao-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background: var(--bg);
+  border-top: var(--border);
+}
+
+footer .caixa-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem;
+}
+
+footer .caixa-footer h3 {
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 1.5rem 0;
+}
+
+footer .caixa-footer span {
+  color: var(--main-color);
+}
+
+footer .caixa-footer .redes-sociais {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+footer .caixa-footer .redes-sociais .botao-redes {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+footer .caixa-footer .redes-sociais .botao-redes i {
+  font-size: 2.7rem;
+  color: #fff;
+}
+
+footer .caixa-footer .redes-sociais .botao-redes:hover {
+  background: var(--main-color);
+}
+
+footer .caixa-footer .copyright {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    left: -45%;
+    transition: left 0.5s;
+  }
+}
+
+/* Estilização mobile */
+
+@media screen and (max-width: 750px) {
+  header section nav {
+    display: none;
+  }
+
+  header section .icons {
+    display: none;
+  }
+
+  header section .botao-abrir-menu {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 4rem;
+  }
+
+  header section .botao-abrir-menu i {
+    font-size: 2.5rem;
+    transition: 0.3s linear;
+    cursor: pointer;
+  }
+
+  header section .botao-abrir-menu i:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+  }
+
+  header section .menu-mobile {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    border-left: var(--border);
+    padding: 3rem 0;
+    gap: 2rem;
+    width: 0;
+    transition: 0.3s linear;
+    z-index: 4;
+    overflow: hidden;
+  }
+
+  header section .menu-mobile .botao-fechar {
+    color: #fff;
+    font-size: 3rem;
+    margin: 0 2rem;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  header section .menu-mobile .botao-fechar:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+  }
+
+  header section .menu-mobile .mobile-icons {
+    display: flex;
+    margin: 0 2rem;
+    gap: 2rem;
+  }
+
+  header section .menu-mobile .mobile-icons a i {
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  header section .menu-mobile .mobile-icons a i:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+  }
+
+  header section .menu-mobile .mobile-nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  header section .menu-mobile .mobile-nav a:hover {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  header section .mascara-mobile {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      109deg,
+      rgba(10, 12, 16, 0.99) 15%,
+      rgba(10, 12, 16, 0.7) 50%,
+      rgba(10, 12, 16, 0.99) 85%
+    );
+  }
+
+  .modal {
+    left: -50%;
+  }
+}
+
+@media screen and (max-width: 608px) {
+  .caixa-principal {
+    text-align: center;
+  }
+
+  .caixa-sobre .sobre-container .sobre-texto {
+    text-align: center;
+  }
+
+  .modal iframe {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal iframe {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .caixa-principal div h3 {
+    font-size: 5rem;
+  }
+
+  .titulo {
+    font-size: 3.2rem;
+  }
+
+  .modal iframe {
+    width: 32rem;
+  }
+
+  .caixa-whatsapp .botao-whatsapp img {
+    height: 4.5rem;
+  }
+
+  footer .caixa-footer .copyright {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 392px) {
+  .caixa-principal div h3 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1040px) and (orientation: landscape) {
+  .caixa-principal {
+    margin-top: 4rem;
+  }
+
+  .caixa-principal div h3 {
+    font-size: 5rem;
+    width: 50rem;
+  }
+
+  .caixa-principal div p {
+    line-height: 1.4;
+  }
+
+  .modal iframe {
+    height: 32rem;
+  }
+}
+
+@media screen and (max-width: 962px) and (orientation: landscape) {
+  .caixa-principal div h3 {
+    font-size: 4.2rem;
+    width: 42rem;
+  }
+
+  .caixa-principal div p {
+    font-size: 1.8rem;
+    width: 45rem;
+  }
+
+  .botao-link {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .modal iframe {
+    height: 26rem;
+  }
+
+  .titulo {
+    padding-bottom: 1.8rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .caixa-principal div h3 {
+    font-size: 3.8rem;
+  }
+
+  .caixa-whatsapp .botao-whatsapp img {
+    height: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 852px) and (orientation: landscape) {
+  .caixa-principal div h3 {
+    font-size: 3.6rem;
+  }
+
+  .titulo {
+    font-size: 3.2rem;
+  }
+
+  .botao-link {
+    margin-top: 1rem;
+  }
+}

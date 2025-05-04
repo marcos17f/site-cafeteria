@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imporio Cafe</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="caixa-video">
+      <video src="./videos/coffee.mp4" loop muted autoplay></video>
+      <div class="mascara"></div>
+    </div>
+
+    <header>
+      <section>
+        <a href="index.html">
+          <img src="./img/logo imperio.jpg" alt="logo-cafeteria" />
+        </a>
+
+        <nav>
+          <a href="#caixa-principal">Home</a>
+          <a href="#caixa-sobre">Sobre</a>
+          <a href="#caixa-menu">Menu</a>
+          <a href="#caixa-review">Clientes</a>
+          <a href="#" onclick="mostrarModal()">Endereço</a>
+        </nav>
+        <div class="icons">
+          <a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+
+        <div class="botao-abrir-menu" onclick="mostrarMenuMobile()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="menu-mobile">
+          <div class="botao-fechar" onclick="fecharMenuMobile()">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          <div class="mobile-icons">
+            <a>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+
+          <nav class="mobile-nav">
+            <a href="#caixa-principal" onclick="fecharMenuMobile()">Home</a>
+            <a href="#caixa-sobre" onclick="fecharMenuMobile()">Sobre</a>
+            <a href="#caixa-menu" onclick="fecharMenuMobile()">Menu</a>
+            <a href="#caixa-review" onclick="fecharMenuMobile()">Clientes</a>
+            <a href="#" onclick="mostrarModal(), fecharMenuMobile()"
+              >Endereço</a
+            >
+          </nav>
+        </div>
+
+        <div class="mascara-mobile" onclick="fecharMenuMobile()"></div>
+      </section>
+    </header>
+
+    <section class="caixa-principal" id="caixa-principal">
+      <div>
+        <h3>Code com o <span>Melhor Café</span> da Região</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          aperiam a nemo praesentium cum culpa esse excepturi, neque atque
+          adipisci accusamus numquam velit expedita recusandae, dicta animi
+          officia voluptas quidem.
+        </p>
+        <a class="botao-link">Pague o seu agora</a>
+      </div>
+    </section>
+
+    <section class="caixa-sobre" id="caixa-sobre">
+      <h2 class="titulo"><span>Sobre</span> Nós</h2>
+      <div class="sobre-container">
+        <div class="sobre-imagem">
+          <img src="./img/about-img.jpg" />
+        </div>
+
+        <div class="sobre-texto">
+          <h3>O que faz o nosso café especial</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet magni
+            pariatur in veniam laborum distinctio ullam optio numquam, quam
+            sint, natus impedit minus autem, laudantium hic nam consectetur
+            aliquam a.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+            eveniet iste temporibus fugit sint. Ipsum, expedita! Mollitia
+            accusamus, rem ad voluptatum placeat reiciendis necessitatibus
+            eligendi ex doloremque eum. Quasi, reprehenderit!
+          </p>
+          <a class="botao-link">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="caixa-menu" id="caixa-menu">
+      <h2 class="titulo"><span>Nosso</span> Menu</h2>
+      <div class="box-container">
+        <div class="box">
+          <img src="./img/menu-1.png" alt="item-1" />
+          <h3>Café coado</h3>
+          <div class="price">R$ 9,50 <span>R$14,99</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="box">
+          <img src="./img/menu-2.png" alt="item-1" />
+          <h3>Café latte</h3>
+          <div class="price">R$ 14,50 <span>R$18,50</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="box">
+          <img src="./img/menu-3.png" alt="item-1" />
+          <h3>Cappuccino canela</h3>
+          <div class="price">R$ 13,99 <span>R$18,99</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="box">
+          <img src="./img/menu-4.png" alt="item-1" />
+          <h3>Café mocha</h3>
+          <div class="price">R$ 11,99 <span>R$13,99</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="box">
+          <img src="./img/menu-5.png" alt="item-1" />
+          <h3>Cappuccino tradicional</h3>
+          <div class="price">R$ 8,99 <span>R$12,99</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="box">
+          <img src="./img/menu-6.png" alt="item-1" />
+          <h3>Café com leite</h3>
+          <div class="price">R$ 11,20 <span>R$15,99</span></div>
+          <a class="botao-link"
+            >Adicione ao Carrinho
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="caixa-review" id="caixa-review">
+      <h2 class="titulo"><span>Nossos</span> Clientes</h2>
+      <div class="box-container">
+        <div class="box">
+          <img src="./img/quote-img.png" alt="comentario" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+            velit soluta tenetur laborum quia, vero ex asperiores quas modi
+            obcaecati. Libero ratione esse consequatur corporis eveniet totam
+            vel est hic.
+          </p>
+          <img class="user" src="./img/pic-1.png" alt="foto-cliente" />
+          <h3>João da Silva</h3>
+          <div class="stars">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/star-half-empty.png"
+              alt="star-half-empty"
+            />
+          </div>
+        </div>
+        <div class="box">
+          <img src="./img/quote-img.png" alt="comentario" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+            velit soluta tenetur laborum quia, vero ex asperiores quas modi
+            obcaecati. Libero ratione esse consequatur corporis eveniet totam
+            vel est hic.
+          </p>
+          <img class="user" src="./img/pic-2.png" alt="foto-cliente" />
+          <h3>Geovanna Thaís</h3>
+          <div class="stars">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+          </div>
+        </div>
+        <div class="box">
+          <img src="./img/quote-img.png" alt="comentario" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+            velit soluta tenetur laborum quia, vero ex asperiores quas modi
+            obcaecati. Libero ratione esse consequatur corporis eveniet totam
+            vel est hic.
+          </p>
+          <img class="user" src="./img/pic-3.png" alt="foto-cliente" />
+          <h3>Regis de Souza</h3>
+          <div class="stars">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+              alt="star--v1"
+            />
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/star-half-empty.png"
+              alt="star-half-empty"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8746495528117!2d-44.35819092542463!3d-9.07518269371072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x77c4d000cdc07c7%3A0xab2049ed8d78d9f9!2zSW1ww6lyaW8gQ2Fmw6kgZSBDb252ZW5pw6puY2lh!5e0!3m2!1spt-BR!2sbr!4v1746329600716!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+
+    <div class="mascara-modal" onclick="esconderModal()"></div>
+
+    <div class="caixa-whatsapp">
+      <a class="botao-whatsapp">
+        <img src="./img/whatsapp icon.png" />
+      </a>
+    </div>
+
+    <footer>
+      <section class="caixa-footer">
+        <h3>Siga-nos nas <span>redes sociais</span></h3>
+        <div class="redes-sociais">
+          <div class="botao-redes">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="botao-redes">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="botao-redes">
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; 2024 - Marcos Felipe | Todos os direitos reservados
+        </p>
+      </section>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/5a5a4d1721.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
